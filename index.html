@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Data</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+    <header>
+        <h1 data-testid="slackUserName">Oluebubechukwu Anita</h1>
+        <img src="slackprofile.jpg" alt="Oluebubechukwuanita" data-testid="slackDisplayImage">
+    </header>
+    <section class="data-container">
+        <div class="data-item">
+            <h2 data-testid="currentDayOfTheWeek">Monday</h2>
+        </div>
+        <div class="data-item">
+            <h2 data-testid="currentUTCTime" id="time">12:08:00</h2>
+        </div>
+        <div class="data-item">
+            <h2 data-testid="myTrack">Frontend</h2>
+        </div>
+        <div class="data-item">
+            <h2><a href="https://github.com/anita-ebube/hng_task1" data-testid="githubURL">My GitHub Repository</a></h2>
+        </div>
+    </section>
+    <script>
+
+        function myTimer() {
+            const date = new Date();
+            document.getElementById("time").innerHTML = date.getTime();
+        }
+        setInterval(myTimer, 1000);
+    </script>
+
+</body>
+</html>
